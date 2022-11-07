@@ -23,7 +23,7 @@ public class Main {
     }
 
     public static Employee findEmployeeWithMaxSalary(Employee[] staff) {
-        Employee result = staff[9];
+        Employee result = staff[0];
         float maxSalary = result.getSalary();
         for (Employee employee : staff) {
             if (employee != null && employee.getSalary() > maxSalary) {
@@ -40,7 +40,7 @@ public class Main {
         for (Employee i : staff) {
             sum += i.getSalary();
         }
-        float averageSalary = (sum / 10);
+        float averageSalary = (sum / staff.length);
         System.out.println(averageSalary);
     }
 
