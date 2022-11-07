@@ -5,7 +5,7 @@ public class Main {
         for (Employee i : staff) {
             sum += i.getSalary();
         }
-        System.out.println(sum);
+        System.out.println("Общая трата на зарплаты сотрудников составила - " + sum + " рублей!");
         return sum;
     }
 
@@ -18,7 +18,7 @@ public class Main {
                 result = employee;
             }
         }
-        System.out.println(result);
+        System.out.println("Минимальная зарплата сотрудника - " + result + " рублей!");
         return result;
     }
 
@@ -31,7 +31,7 @@ public class Main {
                 result = employee;
             }
         }
-        System.out.println(result);
+        System.out.println("Максимальная зарплата сотрудника - " + result + " рублей!");
         return result;
     }
 
@@ -41,12 +41,12 @@ public class Main {
             sum += i.getSalary();
         }
         float averageSalary = (sum / staff.length);
-        System.out.println(averageSalary);
+        System.out.println("Средняя зарплата равна - " + averageSalary + " рублей!");
     }
 
     public static void printNames(Employee[] staff) {
         for (Employee i : staff) {
-            System.out.println(i.getFio());
+            System.out.println("Сотрудник компании - " + i.getFio());
         }
     }
 
@@ -65,5 +65,18 @@ public class Main {
         for (Employee i : staff) {
             System.out.println(i);
         }
+        calculateSumSalary(staff);
+
+        System.out.println();
+        findEmployeeWithMinSalary(staff);
+
+        System.out.println();
+        findEmployeeWithMaxSalary(staff);
+
+        System.out.println();
+        calculateAverageSalary(staff);
+
+        System.out.println();
+        printNames(staff);
     }
 }
